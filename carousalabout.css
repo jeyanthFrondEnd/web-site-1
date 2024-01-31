@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&family=Frank+Ruhl+Libre&family=Inclusive+Sans&family=Merriweather:ital,wght@1,300&family=Slabo+27px&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'BioRhyme', serif;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Slabo 27px', serif;
+}
+
+/* web header */
+.header {
+    background-image: url(war\ image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.web__page{
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.718), rgba(170, 0, 255, 0.832));
+    background-size: 100%;
+    height: 50vh;
+}
+
+.container-fluid .nav-link h1 {
+    color: rgb(109, 0, 177);
+}
+
+.container-fluid .nav-link h1>span {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.container-fluid h1>span::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+
+}
+
+.header .menu_bar {
+    background: #000000bd;
+}
+
+.Web_page_header ul {
+    justify-content: space-between;
+    width: 40vw;
+    /* flex-direction:row; */
+}
+
+.Web_page_header ul li a {
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    transition: color .5s;
+    font-size: 20px;
+}
+
+.Web_page_header ul li a:hover {
+    color: color-mix(in lab, purple 100%, blue 80%) !important;
+}
+
+.Web_page_header ul li a::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+ul li a:hover::before {
+    transform: scale(1);
+    transform-origin: right;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transition: transform .5s;
+    transform-origin: right;
+}
+
+ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.head-home h1 {
+    color: white;
+}
+
+.head-home h1 span {
+    font-family: 600;
+    color: rgb(109, 0, 177);
+    text-transform: capitalize;
+}
+
+#open {
+    display: none;
+}
+
+@media (max-width:767px) {
+    #open {
+        display: block;
+    }
+
+    header .menu_bar {
+        background: #000000bd;
+        height: 80px;
+        position: relative;
+    }
+
+    header .header-close_open {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Web_page_header ul {
+        display: block;
+        background: #000000bd;
+        height: 70vh;
+        text-align: center;
+        position: absolute;
+        top: 80px;
+        right: -12px;
+        display: none;
+        animation: navbar 1s linear 1;
+    }
+
+    .Web_page_header ul li {
+        padding: 20px 0;
+    }
+}
+/* home about */
+
+.about_home .img__one{
+    animation: image 5s linear infinite;
+}
+.about_home .img__two{
+    animation: imagetwo 5s linear infinite;
+}
+
+@keyframes image {
+    0%{
+        transform:translateY(-5px) translateX(-5px);
+    }
+    50%{
+        transform: translateY(5px) translateX(5px);
+    }
+    100%{
+        transform: translateY(-5px) translateX(-5px);
+    }
+}
+@keyframes imagetwo {
+    0%{
+        transform:translateY(5px) translateX(5px);
+    }
+    50%{
+        transform: translateY(-5px) translateX(-5px);
+    }
+    100%{
+        transform: translateY(5px) translateX(5px);
+    }
+}
+/* about */
+
+.about-section{
+    background-image: url(war\ image.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-section .about {
+    background: #000000e2;
+}
+
+.about_-img img {
+    margin-top: 50px;
+}
+
+section .about_-img h2 {
+    font-size: 60px;
+}
+
+/* guards slider */
+
+section .guards{
+    height: 100vh;
+}
+.guards .container-fluid{
+    overflow-x: hidden;
+}
+.slide_gurad-content{
+    display: none;
+}
+.slide_gurad-content .container{
+    animation: slider .5s linear 1;
+}
+@keyframes slider {
+    from{
+        transform: translateX(-100%) scale(0);
+    }
+    to{
+        transform: translateX(0px) scale(1);
+    }
+}
+.container .img{
+    animation: slider1 1s linear 1;
+}
+.container .container-content{
+    animation: slider2 1s linear 1;
+}
+@keyframes slider1 {
+    0%{
+       opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    51%{
+        opacity: 1;
+        transform: translate(-100%) scale(0);
+    }
+    100%{
+        transform: translate(0) scale(1);
+    }
+}
+@keyframes slider2 {
+    0%{
+       opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    51%{
+        opacity: 1;
+        transform: translate(100%) scale(0);
+    }
+    100%{
+        transform: translate(0) scale(1);
+    }
+}
+.guards .slide_gurad-content:nth-child(1){
+    background-image: url(aboutpagenaruto.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+}
+.guards .slide_gurad-content:nth-child(2){
+    background-image: url(aboutpageitachi.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment:fixed;
+    width: 100%;
+    background-size: cover;
+}
+.guards .slide_gurad-content:nth-child(3){
+    background-image: url(aboutpagesakura.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+}
+.slide_gurad-content .container{
+    background: #00000072;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+/* footer */
+
+footer .container-fluid h1 {
+    color: rgb(109, 0, 177);
+}
+
+footer .container-fluid h1>span {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+footer .container-fluid h1>span::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+
+}
+footer .foot-a a:hover{
+    color: #8502ad !important;
+}
+footer i:hover{
+    color: #00e1ff;
+    cursor: pointer;
+}

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&family=Frank+Ruhl+Libre&family=Inclusive+Sans&family=Merriweather:ital,wght@1,300&family=Slabo+27px&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'BioRhyme', serif;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Slabo 27px', serif;
+}
+
+/* web header */
+.service-header {
+    background-image: url(powerbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.web__page-service {
+    background: linear-gradient(to bottom, rgba(0, 238, 255, 0.332), rgba(170, 0, 255, 0.515));
+    background-size: 100%;
+    height: 50vh;
+}
+
+.container-fluid .nav-link h1 {
+    color: rgb(109, 0, 177);
+}
+
+.container-fluid .nav-link h1>span {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.container-fluid h1>span::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+
+}
+
+.header .menu_bar {
+    background: #000000bd;
+}
+
+.web__page-service ul {
+    justify-content: space-between;
+    width: 40vw;
+    /* flex-direction:row; */
+}
+
+.web__page-service ul li a {
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    transition: color .5s;
+    font-size: 20px;
+}
+
+.web__page-service ul li a:hover {
+    color: color-mix(in lab, purple 100%, blue 80%) !important;
+}
+
+.web__page-service ul li a::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+ul li a:hover::before {
+    transform: scale(1);
+    transform-origin: right;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transition: transform .5s;
+    transform-origin: right;
+}
+
+ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.head-home h1 {
+    color: white;
+}
+
+.head-home h1 span {
+    font-family: 600;
+    color: rgb(109, 0, 177);
+    text-transform: capitalize;
+}
+
+#open {
+    display: none;
+}
+
+@media (max-width:767px) {
+    #open {
+        display: block;
+    }
+
+    header .menu_bar {
+        background: #000000bd;
+        height: 80px;
+        position: relative;
+    }
+
+    header .header-close_open {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .web__page-service ul {
+        display: block;
+        background: #000000bd;
+        height: 70vh;
+        text-align: center;
+        position: absolute;
+        top: 80px;
+        right: -12px;
+        display: none;
+        animation: navbar 1s linear 1;
+    }
+
+    .web__page-service ul li {
+        padding: 20px 0;
+    }
+}
+
+/* head service */
+
+.service .container h1{
+    letter-spacing: 2px;
+    font-weight: 550;
+    font-style: italic;
+}
+
+/* offer service */
+
+.offer_service{
+    background-image: url(pexels-cottonbro-studio-4709285.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.off-service{
+    background: linear-gradient(to right,rgba(255, 255, 255, 0)10%,rgba(166, 0, 255, 0.52) 100%);
+}
+.off-service .container{
+    backdrop-filter: blur(10px);
+}
+.off-service img{
+    width:500px;
+}
+.off-service .col-lg-6{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.off-service .col-lg-6 .positions{
+    position: absolute;
+    transition: .5s;
+    left: 0;
+}
+.off-service .col-lg-6:hover .positions{
+    position: absolute;
+    transform: rotate(10deg);
+    left: 0;
+}
+.off-service .col-lg-6:hover .positions:nth-child(2){
+    transform: rotate(5deg);
+}
+/*  */
+
+
+.service .card{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.service .col-lg-4{
+    position: relative;
+}
+.service .col-lg-4 .btn__button{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    z-index: 1;
+}
+.service .card i{
+    font-size: 50px;
+    background: #dcdcdc;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    /* transform-style: preserve-3d; */
+}
+.service .card:hover i{
+    transform:rotate(360deg);
+    color: rgb(208, 0, 255);
+    background: #00000000;
+    font-size: 75px;
+}
+.service .card button{
+    width: 80%;
+}
+
+/* fooottttterr */
+
+
+footer .container-fluid h1 {
+    color: rgb(109, 0, 177);
+}
+
+footer .container-fluid h1>span {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+footer .container-fluid h1>span::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    background: rgb(109, 0, 177);
+    width: 100%;
+    height: 2px;
+
+}
+
+footer .foot-a a:hover {
+    color: #8502ad !important;
+}
+
+footer i:hover {
+    color: #00e1ff;
+    cursor: pointer;
+}
